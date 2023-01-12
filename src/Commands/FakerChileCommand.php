@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astersnake\FakerChile\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FakerChileCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'faker-chile';
 
     public $description = 'My command';
 

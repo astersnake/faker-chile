@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "astersnake/faker-chile",
+    "description": "With this package, you can easily generate Chilean names, addresses, phone numbers, and more. The provider includes a wide variety of data sets, including Chilean regions, provinces, and municipalities, as well as popular Chilean names, addresses, and phone numbers. ",
     "keywords": [
-        ":vendor_name",
+        "astersnake",
         "laravel",
-        ":package_slug"
+        "faker-chile"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/astersnake/faker-chile",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "astersnake",
+            "email": "astersnake@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Astersnake\\FakerChile\\": "src",
+            "Astersnake\\FakerChile\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Astersnake\\FakerChile\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Astersnake\\FakerChile\\FakerChileServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FakerChile": "Astersnake\\FakerChile\\Facades\\FakerChile"
             }
         }
     },
