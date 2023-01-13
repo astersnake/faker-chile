@@ -2,9 +2,9 @@
 
 namespace Astersnake\FakerChile\Tests;
 
+use Astersnake\FakerChile\FakerChileServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astersnake\FakerChile\FakerChileServiceProvider;
 
 class TestCase extends Orchestra
 {

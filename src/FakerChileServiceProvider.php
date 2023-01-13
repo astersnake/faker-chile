@@ -2,9 +2,14 @@
 
 namespace Astersnake\FakerChile;
 
+use Faker\Factory as FakerFactory;
+use Faker\Generator as FakerGenerator;
+use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Config\Repository as ConfigRepository;
+use Spatie\LaravelPackageTools\Exceptions\InvalidPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Astersnake\FakerChile\Commands\FakerChileCommand;
 
 class FakerChileServiceProvider extends PackageServiceProvider
 {
@@ -16,10 +21,6 @@ class FakerChileServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('faker-chile')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_faker-chile_table')
-            ->hasCommand(FakerChileCommand::class);
+            ->name('faker-chile');
     }
 }

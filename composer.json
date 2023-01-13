@@ -4,7 +4,9 @@
     "keywords": [
         "astersnake",
         "laravel",
-        "faker-chile"
+        "faker-chile",
+        "faker",
+        "laravel"
     ],
     "homepage": "https://github.com/astersnake/faker-chile",
     "license": "MIT",
@@ -18,6 +20,7 @@
     "require": {
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.13.0",
+        "fakerphp/faker": "~1.12",
         "illuminate/contracts": "^9.0"
     },
     "require-dev": {
@@ -36,7 +39,7 @@
     "autoload": {
         "psr-4": {
             "Astersnake\\FakerChile\\": "src",
-            "Astersnake\\FakerChile\\Database\\Factories\\": "database/factories"
+            "Faker\\Provider\\": "src/Provider"
         }
     },
     "autoload-dev": {
