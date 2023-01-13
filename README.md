@@ -1,6 +1,6 @@
 # Chile Localized Providers for Faker
 
-The provider includes a wide variety of data sets, including Chilean regions, provinces, and municipalities, as well as popular Chilean names, addresses, and phone numbers.
+The provider includes a wide variety of data sets for fzaninotto/Faker, including Chilean regions, provinces, and municipalities, as well as popular Chilean names, addresses, and phone numbers.
 
 ## Installation
 
@@ -18,6 +18,15 @@ $faker = Faker\Factory::create('es_CL');
 for ($i = 0; $i < 3; $i++) {
     echo $faker->rut() . "\n";
 }
+```
+
+## Add locale to configuration  file
+
+If you want to use the locale in your Laravel project, you can add it to the app configuration file.
+
+```php
+// config/app.php
+'faker_locale' => 'es_CL',
 ```
 
 ## Testing
