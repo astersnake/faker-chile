@@ -41,7 +41,12 @@ class Person extends \Faker\Provider\Person
      */
     public function rut(int $length = 8): string
     {
-        $rut = rand(1, 99999999);
+        $rut = '';
+
+        for($i = 0; $i < $length; $i++) {
+            $rut .= mt_rand(0, 9);
+        }
+        
         $dv = 11 - ($rut % 11);
         if ($dv == 10) {
             $dv = 'K';
