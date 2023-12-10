@@ -46,14 +46,38 @@ class Person extends \Faker\Provider\Person
         for($i = 0; $i < $length; $i++) {
             $rut .= mt_rand(0, 9);
         }
-        
-        $dv = 11 - ($rut % 11);
-        if ($dv == 10) {
-            $dv = 'K';
-        } elseif ($dv == 11) {
-            $dv = 0;
-        }
+
+        $dv = self::getVd((int)$rut);
 
         return "{$rut}-{$dv}";
+    }
+
+    /**
+     * Returns the Verification Digit from a RUT number.
+     * https://github.com/Laragear/Rut/blob/a4f6812a889c67115a6c7f2d7e0782ec4807061f/src/Rut.php#L446
+     *
+     * @param  int  $num
+     * @return string
+     */
+    public static function getVd(int $num): string
+    {
+        $i = 2;
+        $sum = 0;
+
+        foreach (array_reverse(str_split((string) $num)) as $v) {
+            if ($i === 8) {
+                $i = 2;
+            }
+            $sum += (int) $v * $i;
+            $i++;
+        }
+
+        $digit = 11 - ($sum % 11);
+
+        return (string) match ($digit) {
+            11 => 0,
+            10 => 'K',
+            default => $digit,
+        };
     }
 }
